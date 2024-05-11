@@ -24,7 +24,7 @@ def calcular(operacion: str, numeros: list[float]) -> float | str:
     numero1, numero2 = numeros
 
     # Correción al caso de prueba #12
-    if isinstance(numero1, str) or isinstance(numero2, str):
+    if not isinstance(numero1, (float, int)) or not isinstance(numero2, (float, int)):
         return "Los valores ingresados deben ser números"
     
     if operacion == "+":
