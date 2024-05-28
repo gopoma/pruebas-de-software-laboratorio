@@ -36,7 +36,7 @@ public class WithdrawalTest
     @Test
     public void testCP10() {
         BankDatabase bankDatabaseAux = new BankDatabase();
-        bankDatabaseAux.debit(12345, 1000);
+        bankDatabaseAux.debit(12345, 1200);
         temp = new Withdrawal(12345, screen, bankDatabaseAux, keypad, cashDispenser);
         temp.execute();
         double currAmount = bankDatabaseAux.getTotalBalance(12345);
@@ -48,34 +48,34 @@ public class WithdrawalTest
     public void testCP09() {
         double currAmount = bankDatabase.getTotalBalance(12345);
         screen.dispalyDollarAmount(currAmount);
-        assertEquals(800.00, currAmount, 1.0);
+        assertEquals(1000.00, currAmount, 1.0);
     }
     
     @Test
     public void testCP08() {
         double currAmount = bankDatabase.getTotalBalance(12345);
         screen.dispalyDollarAmount(currAmount);
-        assertEquals(900.00, currAmount, 1.0);
+        assertEquals(1100.00, currAmount, 1.0);
     }
     
     @Test
     public void testCP07() {
         double currAmount = bankDatabase.getTotalBalance(12345);
         screen.dispalyDollarAmount(currAmount);
-        assertEquals(940.00, currAmount, 1.0);
+        assertEquals(1140.00, currAmount, 1.0);
     }
     
     @Test
     public void testCP06() {
         double currAmount = bankDatabase.getTotalBalance(12345);
         screen.dispalyDollarAmount(currAmount);
-        assertEquals(960.00, currAmount, 1.0);
+        assertEquals(1160.00, currAmount, 1.0);
     }
     
     @Test
     public void testCP05() {
         double currAmount = bankDatabase.getTotalBalance(12345);
         screen.dispalyDollarAmount(currAmount);
-        assertEquals(980.00, currAmount, 1.0);
+        assertEquals(1180.00, currAmount, 1.0);
     }   
 }

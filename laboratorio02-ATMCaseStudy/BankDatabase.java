@@ -40,7 +40,7 @@ public class BankDatabase {
     
     // return total balance from the account with specified account number
     public double getTotalBalance(int userAccountNumber) {
-        return getAccount(userAccountNumber).getAvailableBalance();
+        return getAccount(userAccountNumber).getTotalBalance();
     }
     
     // credit an amount from the account with specified accout number
