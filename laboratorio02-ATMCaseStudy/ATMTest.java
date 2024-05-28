@@ -1,10 +1,5 @@
-
-
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
+import org.junit.Test;
+import static org.junit.Assert.*;
 /**
  * The test class ATMTest.
  *
@@ -13,30 +8,56 @@ import org.junit.jupiter.api.Test;
  */
 public class ATMTest
 {
+    
     /**
      * Default constructor for test class ATMTest
      */
     public ATMTest()
     {
     }
+    
+    @Test
+    public void TestCP01() {
+        // acc: 12345, pin: 54321
+        ATM atm = new ATM();
+        atm.authenticateUser();
+        assertTrue(atm.userAuthenticated);
+        
+    }
+    
+    @Test
+    public void TestCP02() {
+        // acc: 12345, pin: 12322
+        ATM atm = new ATM();
+        atm.authenticateUser();
+        assertFalse(atm.userAuthenticated);
+        
+    }
+
+    
+    @Test
+    public void TestCP03() {
+        // acc: 12444, pin: 54321
+        ATM atm = new ATM();
+        atm.authenticateUser();
+        assertFalse(atm.userAuthenticated);
+        
+    }
+
+    
+    
 
     /**
      * Sets up the test fixture.
      *
      * Called before every test case method.
      */
-    @BeforeEach
-    public void setUp()
-    {
-    }
+    
 
     /**
      * Tears down the test fixture.
      *
      * Called after every test case method.
      */
-    @AfterEach
-    public void tearDown()
-    {
-    }
+    
 }
