@@ -2,13 +2,13 @@
     // Represents an automated teller machine
     
 public class ATM {
-    public boolean userAuthenticated; // whether user is authenticated
+    private boolean userAuthenticated; // whether user is authenticated
     private int currentAccountNumber; // curent user's account number
     private Screen screen; // ATM's screen
     private Keypad keypad; // ATM's keypad
     private CashDispenser cashDispenser; // ATM's cash dispenser
     private DepositSlot depositSlot; // ATM's deposit slot
-    public BankDatabase bankDatabase; // account information database
+    private BankDatabase bankDatabase; // account information database
     
     // constants corresponding menu options
     private static final int BALANCE_INQUIRY = 1;

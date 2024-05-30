@@ -1,5 +1,7 @@
-import org.junit.Test;
+
+
 import static org.junit.Assert.*;
+import org.junit.Test;
 /**
  * The test class ATMTest.
  *
@@ -8,29 +10,28 @@ import static org.junit.Assert.*;
  */
 public class ATMTest
 {
-    
     /**
      * Default constructor for test class ATMTest
      */
     public ATMTest()
     {
     }
+
+    BankDatabase bd = new BankDatabase();
     
-    @Test
+     @Test
     public void TestCP01() {
         // acc: 12345, pin: 54321
-        ATM atm = new ATM();
-        atm.authenticateUser();
-        assertTrue(atm.userAuthenticated);
+        
+        assertTrue(bd.authenticateUser(12345, 54321));
         
     }
     
     @Test
     public void TestCP02() {
         // acc: 12345, pin: 12322
-        ATM atm = new ATM();
-        atm.authenticateUser();
-        assertFalse(atm.userAuthenticated);
+        
+        assertFalse(bd.authenticateUser(12345, 12322));
         
     }
 
@@ -38,26 +39,8 @@ public class ATMTest
     @Test
     public void TestCP03() {
         // acc: 12444, pin: 54321
-        ATM atm = new ATM();
-        atm.authenticateUser();
-        assertFalse(atm.userAuthenticated);
+        
+        assertFalse(bd.authenticateUser(12444, 54321));
         
     }
-
-    
-    
-
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    
 }
