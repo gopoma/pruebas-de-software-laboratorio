@@ -1,10 +1,7 @@
 
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
+import static org.junit.Assert.*;
+import org.junit.Test;
 /**
  * The test class ATMTest.
  *
@@ -20,23 +17,39 @@ public class ATMTest
     {
     }
 
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @BeforeEach
-    public void setUp()
-    {
+    BankDatabase bd = new BankDatabase();
+    
+     @Test
+    public void TestCP01() {
+        // acc: 12345, pin: 54321
+        
+        assertTrue(bd.authenticateUser(12345, 54321));
+        
+    }
+    
+    @Test
+    public void TestCP02() {
+        // acc: 12345, pin: 12322
+        
+        assertFalse(bd.authenticateUser(12345, 12322));
+        
     }
 
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @AfterEach
-    public void tearDown()
-    {
+    
+    @Test
+    public void TestCP03() {
+        // acc: 12444, pin: 54321
+        
+        assertFalse(bd.authenticateUser(12444, 54321));
+        
+    }
+    
+    @Test
+    public void TestCP04() {
+        // acc: 12444, pin: 54321
+        // Probar que regrese los saldos correspondientes CP04
+        assertEquals(bd.getAvailableBalance(12345), 1000.0, 0);
+        assertEquals(bd.getTotalBalance(12345), 1200.0, 0);
+        
     }
 }

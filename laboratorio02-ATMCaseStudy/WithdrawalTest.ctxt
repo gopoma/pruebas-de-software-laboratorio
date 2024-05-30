@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=WithdrawalTest
+comment0.text=\r\n\ The\ test\ class\ WithdrawalTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=WithdrawalTest()
+comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ WithdrawalTest\r\n
+comment2.params=
+comment2.target=void\ setUp()
+comment3.params=
+comment3.target=void\ testCP10()
+comment4.params=
+comment4.target=void\ testCP09()
+comment5.params=
+comment5.target=void\ testCP08()
+comment6.params=
+comment6.target=void\ testCP07()
+comment7.params=
+comment7.target=void\ testCP06()
+comment8.params=
+comment8.target=void\ testCP05()
+numComments=9

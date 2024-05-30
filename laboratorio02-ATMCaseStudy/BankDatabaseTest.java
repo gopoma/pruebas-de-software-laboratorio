@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -23,6 +22,18 @@ public class BankDatabaseTest
         
         assertTrue(bd.authenticateUser(userAccountNumber1, userPin1));
         assertTrue(bd.authenticateUser(userAccountNumber2, userPin2));
+    }
+    
+    @Test
+    public void testCP04() {
+        BankDatabase bd = new BankDatabase();
+        double expectAvailableBalance = 1000.0;
+        double expectTotalBalance = 1200.0;
+        double user1AvailableBalance = bd.getAvailableBalance(12345);
+        double user1TotalBalance = bd.getTotalBalance(12345);
+        System.out.println(user1TotalBalance);
+        assertEquals(expectAvailableBalance, user1AvailableBalance, 0);
+        assertEquals(expectTotalBalance, user1TotalBalance , 0);
     }
     
     @Test
