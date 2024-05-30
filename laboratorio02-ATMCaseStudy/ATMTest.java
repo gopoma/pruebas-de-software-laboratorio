@@ -45,9 +45,9 @@ public class ATMTest
     }
     
     @Test
-    public void TestCP23() {
+    public void TestCP04() {
         // acc: 12444, pin: 54321
-        // Probar que regrese los saldos correspondientes CP023
+        // Probar que regrese los saldos correspondientes CP04
         assertEquals(bd.getAvailableBalance(12345), 1000.0, 0);
         assertEquals(bd.getTotalBalance(12345), 1200.0, 0);
         
