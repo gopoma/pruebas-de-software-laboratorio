@@ -10,4 +10,6 @@ comment3.params=
 comment3.target=void\ TestCP02()
 comment4.params=
 comment4.target=void\ TestCP03()
-numComments=5
+comment5.params=
+comment5.target=void\ TestCP23()
+numComments=6

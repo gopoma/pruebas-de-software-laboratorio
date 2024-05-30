@@ -43,4 +43,13 @@ public class ATMTest
         assertFalse(bd.authenticateUser(12444, 54321));
         
     }
+    
+    @Test
+    public void TestCP23() {
+        // acc: 12444, pin: 54321
+        // Probar que regrese los saldos correspondientes CP023
+        assertEquals(bd.getAvailableBalance(12345), 1000.0, 0);
+        assertEquals(bd.getTotalBalance(12345), 1200.0, 0);
+        
+    }
 }
