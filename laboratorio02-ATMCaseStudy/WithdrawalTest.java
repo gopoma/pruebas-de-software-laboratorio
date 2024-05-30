@@ -24,6 +24,7 @@ public class WithdrawalTest
     private CashDispenser cashDispenser = new CashDispenser();
     private DepositSlot depositSlot = new DepositSlot();
     private BankDatabase bankDatabase = new BankDatabase();
+
     private Transaction temp;
     
     @Before

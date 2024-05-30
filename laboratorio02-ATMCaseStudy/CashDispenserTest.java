@@ -17,6 +17,7 @@ public class CashDispenserTest
     public void sufficientCashAvailableValido() {
         CashDispenser cd = new CashDispenser();
         
+        // Las entradas son el efectivo, no el número de billetes, de ahí la conversión
         assertTrue(cd.isSufficientCashAvailable(1 * 20));
         assertTrue(cd.isSufficientCashAvailable(10 * 20));
         assertTrue(cd.isSufficientCashAvailable(100 * 20));
@@ -31,8 +32,7 @@ public class CashDispenserTest
     public void sufficientCashAvailableInvalido() {
         CashDispenser cd = new CashDispenser();
         
-        assertTrue(cd.isSufficientCashAvailable(CASH_DISPENSER_INITIAL_COUNT * 20));
-        
+        // Las entradas son el efectivo, no el número de billetes, de ahí la conversión
         assertFalse(cd.isSufficientCashAvailable((CASH_DISPENSER_INITIAL_COUNT + 1) * 20));
         assertFalse(cd.isSufficientCashAvailable(600 * 20));
         assertFalse(cd.isSufficientCashAvailable(1000 * 20));

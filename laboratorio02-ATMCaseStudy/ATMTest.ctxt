@@ -11,5 +11,5 @@ comment3.target=void\ TestCP02()
 comment4.params=
 comment4.target=void\ TestCP03()
 comment5.params=
-comment5.target=void\ TestCP23()
+comment5.target=void\ TestCP04()
 numComments=6
